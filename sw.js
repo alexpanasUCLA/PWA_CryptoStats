@@ -8,8 +8,8 @@ self.addEventListener('install',event=>{
       console.log('Cache is created');
       return cache.addAll([
         '/',
-        'style.css'
-
+        'style.css',
+        'app.js'
     ]);
     });
     event.waitUntil(cacheShell);
