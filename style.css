@@ -1,0 +1,46 @@
+body{
+  text-align: center;
+  background-color: #d3d4d2;
+}
+h1{
+  text-align: center;
+}
+
+
+.container{
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 50vw;
+}
+
+
+p{
+  font-size: 1.5em;
+  flex-grow: 1;
+  margin: 0;
+  padding: 1em;
+  background-color:#9397cb;
+  border-radius: 1em;
+}
+
+span.topten {
+  color: #fff;
+}
+
+button {
+  border-radius: 0.5em;
+  margin-top: 2em;
+  border: none;
+  outline:none;
+  background-color: #d3d4d2;
+}
+
+button > p {
+  background-color: red;
+  color: #fff;
+}
+
+span {
+  color:#fff;
+}
