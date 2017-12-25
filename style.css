@@ -55,7 +55,7 @@ span {
   color:#fff;
 }
 
-.btn-2 {
+/* .btn-2 {
   display: none;
   margin: auto;
   margin-top: 4em;
@@ -66,9 +66,9 @@ span {
   font-size: 1.5em;
   border:none;
   outline: none;
-}
+} */
 
-.visible {
+/* .visible {
   display: block;
   margin: auto;
   margin-top: 4em;
@@ -79,7 +79,7 @@ span {
   font-size: 1.5em;
   border:none;
   outline: none;
-}
+} */
 
 .spinner{
   display: none;

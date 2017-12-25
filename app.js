@@ -13,12 +13,22 @@ if (navigator.serviceWorker) {
 const btn = document.querySelector('button');
 const priceSpan = document.querySelector('span');
 const topTen = document.querySelector('.topten');
+const spinner = document.querySelector('.spinner');
 
 // Select img tag to insert gif url
 const imgGif = document.getElementById('gifImage');
 let url = "https://api.giphy.com/v1/gifs/random?api_key=DaGpuX8wBO5c2lz6t61WqxYYgmKcAUum&tag=bitcoin&rating=G";
 
 btn.addEventListener('click', function () {
+
+// make button invisible
+btn.style.display = 'none';
+spinner.style.display = 'block';
+
+// if(btn.classList.contains('btn-2')) {
+//     btn.classList.remove('visible');
+//     spinner.style.display = 'block';
+//   }
 
 // fetch random gif from url
 fetch(url)
