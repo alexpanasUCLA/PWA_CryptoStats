@@ -25,10 +25,6 @@ btn.addEventListener('click', function () {
 btn.style.display = 'none';
 spinner.style.display = 'block';
 
-// if(btn.classList.contains('btn-2')) {
-//     btn.classList.remove('visible');
-//     spinner.style.display = 'block';
-//   }
 
 // fetch random gif from url
 fetch(url)
@@ -90,6 +86,10 @@ fetch(url)
 
     console.log(`${count} coins went up out of total number ${coinArr.length}`);
     priceSpan.innerText = `${count} coins went up out of total number ${coinArr.length}`;
+
+    btn.style.display = 'block';
+    spinner.style.display = 'none';
+
 
 });
 });
