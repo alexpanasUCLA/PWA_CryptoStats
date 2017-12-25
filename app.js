@@ -15,9 +15,7 @@ const priceSpan = document.querySelector('span');
 const topTen = document.querySelector('.topten');
 const spinner = document.querySelector('.spinner');
 
-// Select img tag to insert gif url
-const imgGif = document.getElementById('gifImage');
-let url = "https://api.giphy.com/v1/gifs/random?api_key=DaGpuX8wBO5c2lz6t61WqxYYgmKcAUum&tag=bitcoin&rating=G";
+
 
 btn.addEventListener('click', function () {
 
@@ -26,15 +24,6 @@ btn.style.display = 'none';
 spinner.style.display = 'block';
 
 
-// fetch random gif from url
-fetch(url)
-  .then(resp=>{
-    return resp.json()})
-  .then(obj=>{
-    console.log(obj.data.image_url);
-// Add gif to image tag
-    imgGif.src = obj.data.image_url;
-  });
 
 // Fetching json file of aggregated data
   let aggregateData = fetch(' https://api.coinmarketcap.com/v1/global/')
@@ -87,8 +76,24 @@ fetch(url)
     console.log(`${count} coins went up out of total number ${coinArr.length}`);
     priceSpan.innerText = `${count} coins went up out of total number ${coinArr.length}`;
 
-    btn.style.display = 'block';
-    spinner.style.display = 'none';
+    // Select img tag to insert gif url
+
+    const imgGif = document.getElementById('gifImage');
+    let url = "https://api.giphy.com/v1/gifs/random?api_key=DaGpuX8wBO5c2lz6t61WqxYYgmKcAUum&tag=bitcoin&rating=G";
+
+    // fetch random gif from url
+    fetch(url)
+      .then(resp=>{
+        return resp.json()})
+      .then(obj=>{
+        console.log(obj.data.image_url);
+    // Add gif to image tag
+        imgGif.src = obj.data.image_url;
+        btn.style.display = 'block';
+        spinner.style.display = 'none';
+      });
+
+
 
 
 });
